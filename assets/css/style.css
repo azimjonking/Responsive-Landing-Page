@@ -105,6 +105,83 @@ img
     margin-right: auto;
     overflow: hidden;
 }
+.grid
+{
+    display: grid;
+}
+.home__container
+{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+/*========== BUTTONS ==========*/
+.button
+{
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--title-color);
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+.button:hover
+{
+    background-color: var(--main-color-alt);
+}
+.button__icon
+{
+    transition: .3s;
+}
+.button:hover .button__icon
+{
+    transform: translateX(.25rem);
+}
+.button--flex
+{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+/*========== REUSABLE CSS CLASSES ==========*/
+.image
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner__app__mock
+{
+    position: relative;
+    width: 272px;
+}
+.banner__app__mock .main__img
+{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 240px;
+    height: 520px;
+}
+.banner__app__mock .mockup
+{
+    width: 272px;
+    height: 552px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+.mobile__graphic
+{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
 
 /*========== HEADER ==========*/
 .header
@@ -183,4 +260,30 @@ img
     width: 50%;
     height: 2px;
     background-color: var(--main-color);
+}
+
+/*========== HOME ==========*/
+
+.home
+{
+    padding: 12rem 0 5rem;
+}
+.home__data
+{
+    align-self: center;
+}
+.home__title
+{
+    font-size: var(--big-font-size);
+    line-height: 120%;
+    margin-bottom: var(--mb-1);
+}
+.home__title span
+{
+    color: var(--main-color);
+}
+.home__description
+{
+    margin-bottom: var(--mb-2-5);
+    line-height: 2.2rem;
 }
