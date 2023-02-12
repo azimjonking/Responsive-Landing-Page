@@ -442,3 +442,60 @@ img
     padding: 40px;
     text-align: center;
 }
+
+/*========== TEAM ==========*/
+.testimonial__item
+{
+    padding: 2rem 0;
+    background-color: var(--dark-color-alt);
+    width: 340px;
+    border-radius: 1rem;
+    text-align: center;
+}
+.testimonial__item .img__box
+{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    margin-bottom: var(--mb-1);
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    position: relative;
+}
+.testimonial__item .img__box img
+{
+    border-radius: 50%;
+    width: 100%;
+}
+.testimonial__item h3
+{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+    text-transform: capitalize;
+    transition: .3s;
+}
+.testimonial__item span
+{
+    display: block;
+    margin-bottom: var(--mb-0-75);
+    font-weight: var(--font-medium);
+    font-size: var(--small-font-size);
+    transition: .3s;
+}
+.testimonial__item ul li
+{
+    display: inline-block;
+    padding-left: 10px;
+}
+.testimonial__item ul li a
+{
+    color: var(--title-color);
+    font-size: var(--smaller-font-size);
+    transition: .3s;
+}
+.testimonial__item:hover ul li a,
+.testimonial__item:hover h3,
+.testimonial__item:hover span
+{
+    color: var(--main-color);
+}
