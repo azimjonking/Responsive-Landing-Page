@@ -354,3 +354,91 @@ img
     left: 8px;
     top: 24px;
 }
+
+/*========== PRICING ==========*/
+.pricing__container
+{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.pricing__plan
+{
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+.pricing__plan .pricing__header
+{
+    padding: 20px 30px;
+    position: relative;
+}
+.pricing__plan .pricing__header h3
+{
+    font-size: var(--h3-font-size);
+    text-transform: capitalize;
+}
+.best__value
+{
+    position: absolute;
+    right: -35%;
+    top: 50%;
+    width: 100%;
+    background-color: var(--main-color);
+    text-transform: capitalize;
+    transform: rotate(50deg);
+    font-size: var(--h3-font-size);
+    text-align: center;
+    padding: 10px 0;
+}
+.pricing__plan .pricing__price
+{
+    padding: 40px 30px;
+    display: flex;
+    line-height: 0.7;
+}
+.pricing__plan .pricing__price .currency
+{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    margin-right: 5px;
+    align-self: flex-start;
+}
+.pricing__plan .pricing__price .price
+{
+    font-size: var(--big-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--main-color);
+}
+.pricing__plan .pricing__price .period
+{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    margin-right: 5px;
+    align-self: flex-end;
+    text-transform: uppercase;
+}
+.pricing__plan .pricing__body
+{
+    padding: 0 30px;
+}
+.pricing__plan .pricing__body ul li
+{
+    font-size: var(--small-font-size);
+    font-weight: 300;
+    padding: 10px 0 10px 30px;
+    line-height: 26px;
+    position: relative;
+}
+.pricing__plan .pricing__body ul li i
+{
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 14px;
+}
+.pricing__plan .pricing__footer
+{
+    padding: 40px;
+    text-align: center;
+}
