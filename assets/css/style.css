@@ -109,6 +109,7 @@ img
 {
     display: grid;
 }
+.accordion__container,
 .feature__container,
 .home__container
 {
@@ -498,4 +499,74 @@ img
 .testimonial__item:hover span
 {
     color: var(--main-color);
+}
+
+/*========== FAQ's ==========*/
+
+.accordion__content
+{
+    align-self: center;
+}
+.accordion__item
+{
+    background-color: var(--dark-color-alt);
+    transition: .3s;
+}
+.accordion__item:not(:last-child)
+{
+    margin-bottom: var(--mb-1);
+}
+.accordion__header
+{
+    padding: 0.75rem 1.25rem;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.accordion__header::before
+{
+    content: '\f067';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: var(--font-semi-bold);
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 10px;
+    top: 50%;
+    color: var(--main-color);
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+.accordion__item.collapsed .accordion__header::before
+{
+    content: '\f068';
+}
+.accordion__header h3
+{
+    font-size: var(--h3-font-size);
+    color: var(--main-color);
+}
+
+.accordion__body
+{
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+.accordion__item.collapsed .accordion__body
+{
+    height: 120px;
+    overflow: visible;
+}
+.accordion__body p
+{
+    font-size: var(--small-font-size);
+    padding: 1rem 1.25rem;
+    transition: .3s;
 }
