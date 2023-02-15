@@ -67,6 +67,10 @@ textarea {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
+html
+{
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--dark-color);
     color: var(--text-color);
@@ -269,12 +273,12 @@ img
     display: none;
 }
 /* Active Link */
-.active__link
+.active-link
 {
     position: relative;
     color: var(--main-color);
 }
-.active__link::after
+.active-link::after
 {
     content: '';
     position: absolute;
@@ -283,6 +287,11 @@ img
     width: 50%;
     height: 2px;
     background-color: var(--main-color);
+}
+
+.scroll-header
+{
+    box-shadow: 0 1px 4px rgba(165, 125, 125, 0.02);
 }
 
 /*========== HOME ==========*/
@@ -801,7 +810,7 @@ img
         width: 88%;
         height: 100%;
         top: 0;
-        right: 100%;
+        right: -100%;
         padding: 4rem 0 0 3rem;
         box-shadow: -2px 0 4px var(--dark-color);
         border-radius: 1rem 0 0 1rem;
