@@ -255,6 +255,15 @@ img
     font-size: 1.2rem;
     cursor: pointer;
 }
+.nav__close
+{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+.nav__close,
 .nav__toggle
 {
     display: none;
@@ -340,7 +349,7 @@ img
 }
 .btn__group
 {
-    display: flex;
+    display: inline-flex;
     gap: 1.25rem;
 }
 .btn__group .button
@@ -792,11 +801,104 @@ img
         width: 88%;
         height: 100%;
         top: 0;
-        right: 0;
+        right: 100%;
         padding: 4rem 0 0 3rem;
         box-shadow: -2px 0 4px var(--dark-color);
         border-radius: 1rem 0 0 1rem;
         z-index: var(--z-fixed);
         transition: .3s;
     }
+    /* show menu */
+    .show-menu
+    {
+        right: 0;
+    }
+    .nav__close,
+    .nav__toggle
+    {
+        display: inline-flex;
+    }
+    .section
+    {
+        padding: 5.5rem 0 1rem;
+    }
+    .home
+    {
+        padding: 5.5rem 0 1rem;
+    }
+    .footer__container,
+    .contact__container,
+    .accordion__container,
+    .pricing__container,
+    .feature__container,
+    .home__container
+    {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+    .feature__img
+    {
+        display: none;
+    }
+    .accordion__container
+    {
+        row-gap: 4rem;
+    }
+    .contact__container
+    {
+        row-gap: 3rem;
+    }
+    .image
+    {
+        justify-content: start;
+    }
+    .mobile__graphic
+    {
+        left: -5%;
+    }
+    .testimonial__item
+    {
+        width: 252px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .footer__subscribe
+    {
+        width: initial;
+    }
+
+}
+@media screen and (max-width: 392px) {
+    .btn__group
+    {
+        flex-direction: column;
+    }
+    .feature__inside ul li 
+    {
+        padding-bottom: var(--mb-2);
+        padding-left: 60px;
+    }
+    .feature__inside ul li h3
+    {
+        padding-bottom: var(--mb-0-75);
+    }
+}
+@media screen and (max-width: 320px) {
+
+    .container
+    {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+    .home__title
+    {
+        font-size: var(--h1-font-size);
+    }
+    .home__description
+    {
+        line-height: 1.4rem;
+    }
+
 }
