@@ -745,3 +745,58 @@ img
     color: var(--text-color);
     margin: 7rem 0 2rem;
 }
+
+/*========== BREAKPOINTS ==========*/
+
+@media screen and (max-width: 1200px) {
+    .container
+    {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .home__description
+    {
+        line-height: 1.8rem;
+    }
+    .pricing__container,
+    .footer__container
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    body
+    {
+        margin: var(--header-height) 0 0 0;
+    }
+    .nav
+    {
+        height: var(--header-height);
+    }
+    .nav__list
+    {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .nav__menu
+    {
+        position: fixed;
+        background: var(--dark-color);
+        width: 88%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding: 4rem 0 0 3rem;
+        box-shadow: -2px 0 4px var(--dark-color);
+        border-radius: 1rem 0 0 1rem;
+        z-index: var(--z-fixed);
+        transition: .3s;
+    }
+}
